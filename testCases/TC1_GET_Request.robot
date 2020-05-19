@@ -12,8 +12,8 @@ Get_weatherInfo
     CREATE SESSION   mysession     ${base_url}
     ${response}=     GET REQUEST  mysession     /utilities/weather/city/${city}
     log to console   ${response.content}
-    #log to console   ${response.status_code}
-    #log to console   ${response.headers}
+    log to console   ${response.status_code}
+    log to console   ${response.headers}
 
     #Validations
     ${status_code}=    convert to string    ${response.status_code}
